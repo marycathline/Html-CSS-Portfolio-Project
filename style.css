@@ -1,0 +1,276 @@
+
+/* General Styles */
+* {
+  font-size: large;
+  font-family: Calibri;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(10, 116, 238);
+
+}
+h1{
+font-family: Times New Roman;
+font-weight: bold;
+font-size: xx-large;
+}
+h3{
+  font-size: larger;
+}
+
+.container {
+
+  width: 100%; /* Flexibly adjusts to the screen size */
+  margin: 0 auto;
+  display: grid;
+
+}
+
+.navbar {
+  overflow: inherit;
+  justify-content: space-between; /* Pushes items apart */
+  background-color: rgba(9, 243, 28, 0.89);
+  padding: 20px;
+  border-radius: 10px;
+
+
+  .account-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.account-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #041404;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.account-links i {
+    font-size: 20px; /* Make icons bigger */
+    color: black; 
+    align-items: center;
+    justify-content: center; 
+    
+}
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto; /* Pushes menu to the right */
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px; /* Adds spacing between links */
+ 
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+  
+
+}
+
+nav ul li a:hover {
+  color: #ba0bf0;
+}
+
+
+
+/*Logo section*/
+.logo {
+  width: 150px;
+  border-radius: 50%;
+
+  background: gray;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  justify-content: space-between;
+}
+
+.hero-text h1 {
+  margin-top: 10px;
+  
+}
+.hero button {
+  padding: 5px 10px;
+  background-color: #85e239;
+  border: none;
+  cursor: pointer;
+}
+
+/* Card Container - Horizontal Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-adjusting columns */
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.card {
+  background: yellow;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+.card h2 {
+  text-align: center;
+}
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color:rgba(9, 243, 28, 0.89);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+/* SECTION Skills */
+.skills-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.skills-section .text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-section .cells {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+}
+
+
+/* Footer Secttion*/
+.footer {
+  background-color: rgba(9, 243, 28, 0.89);
+  width: 100%; /* Full width */
+  position: relative; /* Keeps it in normal document flow */
+  text-align: center; /* Centers content */
+  padding: 20px; /* Adds space inside */
+  bottom: 0; /* Stays at the bottom */
+  color: azure;
+  font-weight: bold;
+}
+
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+
+    .hero {
+      padding: 30px 10px;
+    }
+
+    .card-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .skills-section {
+      padding: 0 20px;
+    }
+
+    .skills-section .cells .cell {
+      width: 100%;
+    }
+
+    .footer {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      width: 100px;
+    }
+
+    .hero-text h1 {
+      font-size: large;
+    }
+
+    .hero button {
+      padding: 5px;
+      font-size: small;
+    }
+
+    .skills-section h2 {
+      font-size: 28px;
+    }
+
+    .skills-section .cells .cell img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .skills-section .cells .cell span {
+      font-size: 16px;
+    }
+  }
