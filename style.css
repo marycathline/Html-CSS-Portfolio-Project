@@ -319,6 +319,29 @@ background: gray;
 
 
   /* Responsive Styles */
+  @media (max-width: 480px) {
+    p {
+      font-size: medium; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .account-links {
+      flex-direction: row; /* Stack links horizontally */
+      align-items: center; /* Center align links */
+      gap: 10px; /* Adjust spacing between links */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .account-links a {
+      font-size: medium; /* Reduce font size for smaller screens */
+    }
+
+    .account-links i {
+      font-size: 20px; /* Adjust icon size */
+    }
+  }
   @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
