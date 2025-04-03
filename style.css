@@ -128,7 +128,7 @@ nav ul li a:hover {
 }
 
 .card {
-  background: yellow;
+  background: rgb(10, 116, 238);
   border-radius: 8px;
   box-shadow: 0 4px 8px white;
   color: black;
