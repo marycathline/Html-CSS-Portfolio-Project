@@ -12,6 +12,12 @@
 
 
 }
+p{
+  font-size: medium;
+  gap: 30px;
+  line-height: 2.0;
+  
+}
 body {
   margin: 0;
   padding: 0;
@@ -21,10 +27,11 @@ body {
 h1{
 font-family: Times New Roman;
 font-weight: bold;
-font-size: xx-large;
+font-size: larger;
 }
 h3{
-  font-size: larger;
+  font-size: large;
+  font-weight: bold;
 }
 
 .container {
@@ -319,30 +326,11 @@ background: gray;
 
 
   /* Responsive Styles */
-  @media (max-width: 480px) {
+   @media (max-width: 768px) {
     p {
       font-size: medium; /* Adjust font size for smaller screens */
     }
-  }
-  
-  @media (max-width: 768px) {
-    .account-links {
-      flex-direction: row; /* Stack links horizontally */
-      align-items: center; /* Center align links */
-      gap: 10px; /* Adjust spacing between links */
-    }
-  }
 
-  @media (max-width: 480px) {
-    .account-links a {
-      font-size: medium; /* Reduce font size for smaller screens */
-    }
-
-    .account-links i {
-      font-size: 20px; /* Adjust icon size */
-    }
-  }
-  @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
       align-items: center;
@@ -352,6 +340,11 @@ background: gray;
       flex-direction: column;
       align-items: center;
       margin-left: 0;
+    }
+    .account-links {
+      flex-direction: row; /* Stack links horizontally */
+      align-items: center; /* Center align links */
+      gap: 10px; /* Adjust spacing between links */
     }
 
     .hero {
@@ -376,6 +369,16 @@ background: gray;
   }
 
   @media (max-width: 480px) {
+    .account-links a {
+      font-size: medium; /* Reduce font size for smaller screens */
+    }
+
+    .account-links i {
+      font-size: 20px; /* Adjust icon size */
+    }
+    p {
+      font-size: medium; /* Adjust font size for smaller screens */
+    }
     .logo {
       width: 100px;
     }
