@@ -1,0 +1,427 @@
+
+/* General Styles */
+* {
+  font-size: xx-large;
+  font-family: Calibri;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  
+  
+
+
+}
+p{
+  font-size: medium;
+  gap: 30px;
+  line-height: 2.0;
+  
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(2, 18, 43);
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+h1{
+font-family: Times New Roman;
+font-weight: bold;
+font-size: larger;
+}
+h3{
+  font-size: large;
+  font-weight: bold;
+}
+
+.container {
+
+  width: 100%; /* Flexibly adjusts to the screen size */
+  margin: 0 auto;
+  display: grid;
+
+}
+
+.navbar {
+  overflow: inherit;
+  justify-content: space-between; /* Pushes items apart */
+  background-color: rgba(228, 9, 162, 0.89);
+  padding: 20px;
+  border-radius: 10px;
+
+
+.account-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows wrapping to prevent overflow */
+    justify-content: flex-end; /* Aligns to the right */
+    color: #500bf0;
+    overflow: hidden; /* Prevents content overflow */
+}
+#account-links p{
+  color: white;
+}
+
+.account-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.account-links i {
+    font-size: 30px; /* Make icons bigger */
+    color: rgb(16, 20, 240); 
+    align-items: center;
+    justify-content: center; 
+    
+}
+}
+.account-links p {
+  color: white;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto; /* Pushes menu to the right */
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px; /* Adds spacing between links */
+ 
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+  
+
+}
+
+nav ul li a:hover {
+  color: #ba0bf0;
+}
+
+
+
+/*Logo section*/
+.logo {
+  width: 150px;
+  border-radius: 50%;
+background: gray;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+   font-style: italic;
+  font-size: xx-large;
+  position: relative;
+  background: url('images/Hero image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: url('images/Hero image.jpg') no-repeat center center/cover;
+  height: 700px;
+  width: 100%;
+  position: relative;
+}
+.hero img {
+  filter: brightness(2.2); /* Increases brightness of the hero image */
+}
+.hero {
+  filter: brightness(2.2); /* Slightly increases brightness */
+}
+.hero-text h1 {
+  margin-top: 10px;
+  
+}
+.hero button {
+  padding: 5px 10px;
+  background-color: #dadada;
+  border: none;
+  cursor: pointer;
+}
+.hero-text h1, .hero-text p, .hero button {
+  animation: fadeIn 5s ease-in-out, slideUp 5s ease-in-out;
+}
+
+.hero-text h1, .hero-text p {
+  animation: textAnimation 5s infinite ease-in-out;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero .centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text visibility */
+  z-index: 1;
+}
+
+/* Card Container - Horizontal Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-adjusting columns */
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.card {
+  
+  border-radius: 8px;
+  box-shadow: 0 4px 8px white;
+  color:  #dadada;
+  padding: 20px;
+  text-align: center;
+  word-wrap: break-word; /* Ensures long text wraps within the card */
+  overflow: hidden; /* Prevents content overflow */
+}
+.card h2 {
+  text-align: center;
+}
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color:  #dadada;
+  color: rgb(11, 8, 243); 
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+/* SECTION Skills */
+.skills-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.skills-section .text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-section .cells {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+}
+
+
+/* Footer Secttion*/
+.footer {
+  background-color: rgba(228, 9, 162, 0.89);
+  width: 100%; /* Full width */
+  position: relative; /* Keeps it in normal document flow */
+  text-align: center; /* Centers content */
+  padding: 20px; /* Adds space inside */
+  bottom: 0; /* Stays at the bottom */
+  color: azure;
+  font-weight: bold;
+}
+
+
+
+
+  /* Responsive Styles */
+   @media (max-width: 768px) {
+    p {
+      font-size: medium; /* Adjust font size for smaller screens */
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+    .account-links {
+      flex-direction: row; /* Stack links horizontally */
+      align-items: center; /* Center align links */
+      gap: 10px; /* Adjust spacing between links */
+    }
+
+    .hero {
+      padding: 30px 10px;
+    }
+
+    .card-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .skills-section {
+      padding: 0 20px;
+    }
+
+    .skills-section .cells .cell {
+      width: 100%;
+    }
+
+    .footer {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .account-links a {
+      font-size: medium; /* Reduce font size for smaller screens */
+    }
+
+    .account-links i {
+      font-size: 20px; /* Adjust icon size */
+    }
+    p {
+      font-size: medium; /* Adjust font size for smaller screens */
+    }
+    .logo {
+      width: 100px;
+    }
+
+    .hero-text h1 {
+      font-size: large;
+    }
+    .hero-text p {
+      font-size: small;
+    }
+
+    nav ul li a {
+      font-size: small;
+      padding: 5px;
+    }
+
+    .card {
+      padding: 10px;
+    }
+
+    .card h2 {
+      font-size: medium;
+    }
+
+    .button {
+      padding: 5px;
+      font-size: small;
+    }
+    .hero button {
+      padding: 5px;
+      font-size: small;
+    }
+
+    .skills-section h2 {
+      font-size: 28px;
+    }
+
+    .skills-section .cells .cell img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .skills-section .cells .cell span {
+      font-size: 16px;
+    }
+  }
